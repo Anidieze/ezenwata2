@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Instagram } from "lucide-react";
+import { Instagram, ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { artworks } from "@/data/artworks2";
@@ -37,6 +37,33 @@ const Index = () => {
           >
             Anidi
           </motion.h1>
+        </div>
+
+        {/* Note to Self CTA */}
+        <div className="absolute inset-0 z-10 flex items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 1.3 }}
+            className="relative"
+          >
+            <motion.div
+              className="relative"
+              animate={{
+                y: [0, -10, 0],
+              }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <Link
+                to="/new_collection/note_to_self"
+                className="relative inline-flex items-center gap-3 md:gap-4 bg-primary text-primary-foreground px-5 sm:px-8 md:px-10 py-3.5 md:py-4 text-sm sm:text-base md:text-lg uppercase tracking-widest md:tracking-[0.2em] font-semibold rounded-full text-center whitespace-nowrap group"
+              >
+                <span className="w-2 h-2 rounded-full bg-primary-foreground animate-pulse" />
+                New Collection — Note to Self 2026
+                <ArrowRight size={20} className="hidden sm:block group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
 
         {/* "Visual Artist" pinned to bottom-left */}

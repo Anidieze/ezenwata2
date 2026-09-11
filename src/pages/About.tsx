@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Instagram } from "lucide-react";
-// import video1 from "@/assets/video-1.mp4";
+import video1 from "@/assets/video-1.mp4";
 
 const About = () => {
   return (
@@ -18,7 +18,7 @@ const About = () => {
               transition={{ duration: 0.8 }}
             >
               <video
-                // src={video1}
+                src={video1}
                 autoPlay
                 loop
                 muted

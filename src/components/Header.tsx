@@ -15,6 +15,7 @@ const Header = () => {
     { label: "Exhibitions", path: "/exhibitions" },
     { label: "Works", path: "/work" },
     { label: "Shop", path: "/shop" },
+    { label: "New", path: "/new_collection/note_to_self" },
     { label: "Contact", path: "/contact" },
   ];
 

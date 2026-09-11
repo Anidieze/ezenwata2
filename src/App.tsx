@@ -10,9 +10,11 @@ import Exhibitions from "./pages/Exhibitions";
 import Work from "./pages/Work";
 import ArtworkDetail from "./pages/ArtworkDetail";
 import Shop from "./pages/Shop";
+import New from "./pages/new";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +25,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
@@ -30,6 +33,7 @@ const App = () => (
             <Route path="/work" element={<Work />} />
             <Route path="/work/:id" element={<ArtworkDetail />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/new_collection/note_to_self" element={<New />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="*" element={<NotFound />} />

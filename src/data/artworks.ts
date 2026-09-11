@@ -27,6 +27,7 @@ export interface Artwork {
   status: "new" | "sold";
   price: number;
   description: string;
+  tool?: string;
   dimensions?: string;
 }
 
